@@ -31,7 +31,7 @@ const TweetList: React.FC<Props> = ({userEmail}) => {
   useEffect(() => {
     const fetchTweets = async () => {
       try {
-        const response = await fetch('http://localhost:8080/tweets'); // Assuming your API is on the same domain
+        const response = await fetch('https://tmp2-b-375247885230.us-central1.run.app/tweets'); // Assuming your API is on the same domain
         const data = await response.json() as TweetProps[];
         setTweets(data);
       } catch (error) {

@@ -22,7 +22,7 @@ const handleLike = async (id: string) => {
 
 
   try {
-    const response = await fetch(`http://localhost:8080/tweets/${id}/like`, {
+    const response = await fetch(`https://tmp2-b-375247885230.us-central1.run.app/tweets/${id}/like`, {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json',

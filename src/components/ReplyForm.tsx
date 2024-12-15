@@ -51,7 +51,7 @@ const ReplyForm: React.FC<any> = ({ parentTweetId, userEmail}) => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/tweets', {
+      const response = await fetch('https://tmp2-b-375247885230.us-central1.run.app/tweets', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

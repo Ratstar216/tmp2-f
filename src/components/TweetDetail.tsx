@@ -37,7 +37,7 @@ const TweetDetail: React.FC<Props> = ({userEmail}) => {
   useEffect(() => {
     const fetchTweet = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/tweets/${id}`);
+        const response = await fetch(`https://tmp2-b-375247885230.us-central1.run.app/tweets/${id}`);
         const data = await response.json() as TweetProps[];
         setTweets(data);
         console.log("success");
@@ -49,7 +49,7 @@ const TweetDetail: React.FC<Props> = ({userEmail}) => {
 
     const fetchTweet2 = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/tweets`);
+        const response = await fetch(`https://tmp2-b-375247885230.us-central1.run.app/tweets`);
         const data = await response.json() as TweetProps[];
         setTweets(data);
         console.log("success");

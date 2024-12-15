@@ -7,6 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 
 import SignupForm from './SignupForm';
 import SigninForm from './SigninForm';
+import Signout from './SignOut';
 
 
 
@@ -36,6 +37,7 @@ const App: React.FC = () => {
     <div className="Forms">
     <SignupForm />
     <SigninForm />
+    <Signout />
     </div>
     User: {userEmail}
     {loginUser ? 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 interface TweetProps {
@@ -44,7 +45,9 @@ const Tweet: React.FC<Props> = ({ tweet }) => {
   // console.log("tweet component", tweet);
   return (
     <div>
-      <p>{tweet.content}</p>
+      <Link to={`/tweets/${tweet.id}`}>
+        <p>{tweet.content}</p>
+      </Link>
       <small>
         Posted by user {tweet.user_id} on{' '}
         {/* {new Date(tweet.created_at).toLocaleString()} */}

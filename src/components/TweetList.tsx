@@ -54,9 +54,10 @@ const TweetList: React.FC<Props> = ({userEmail}) => {
       <ul>
         {tweets.filter((tweet) => tweet.parent_id == "").map((tweet) => (
           <li key={tweet.id}>
-            <Link to={`/tweets/${tweet.id}`}>
+            {/* <Link to={`/tweets/${tweet.id}`}>
               <Tweet tweet={tweet} />
-            </Link>
+            </Link> */}
+            <Tweet tweet={tweet} />
           </li>
         ))}
       </ul>
